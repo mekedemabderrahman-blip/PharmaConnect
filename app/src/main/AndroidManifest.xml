@@ -12,6 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PharmaConnect">
         <activity
+            android:name=".profile_client"
+            android:exported="false" />
+        <activity
+            android:name=".commande_client"
+            android:exported="false" />
+        <activity
+            android:name=".carte_client"
+            android:exported="false" />
+        <activity
+            android:name=".accueil_client"
+            android:exported="false" />
+        <activity
             android:name=".Ninth"
             android:exported="false" />
         <activity
