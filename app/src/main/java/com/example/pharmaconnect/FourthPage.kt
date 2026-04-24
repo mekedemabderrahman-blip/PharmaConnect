@@ -29,6 +29,9 @@ class FourthPage : AppCompatActivity() {
             val email = binding.etFourthpEmail.text.toString().trim()
             val password = binding.etFourthpPassword.text.toString().trim()
 
+
+
+
             if (fullname.isEmpty()) {
                 binding.etFourthpName.error = "Entrez votre nom complet"
 
@@ -53,21 +56,24 @@ class FourthPage : AppCompatActivity() {
                     .addOnSuccessListener { result ->
                         val uid = result.user?.uid ?: return@addOnSuccessListener
 
-                        // Sauvegarder dans Firestore
                         val client = hashMapOf(
                             "nomComplet" to fullname,
                             "email" to email,
                             "type" to "client"
                         )
 
+                        // 👇 Sauvegarde dans "clients"
                         FirebaseDatabase.getInstance().getReference("clients")
                             .child(uid)
                             .setValue(client)
                             .addOnSuccessListener {
                                 Toast.makeText(this, "Compte créé !", Toast.LENGTH_SHORT).show()
-                                val newaccount = Intent(this, accueil_client::class.java)
-                                startActivity(newaccount)
+                                val intent = Intent(this, accueil_client::class.java)
+                                startActivity(intent)
                                 finish()
+                            }
+                            .addOnFailureListener { e ->
+                                Toast.makeText(this, "Erreur : ${e.message}", Toast.LENGTH_SHORT).show()
                             }
                     }
                     .addOnFailureListener { e ->
