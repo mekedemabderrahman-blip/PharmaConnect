@@ -11,7 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PharmaConnect">
-
+        <activity
+            android:name=".Notification_activity"
+            android:exported="false" />
+        <activity
+            android:name=".Notification_Adapter"
+            android:exported="false" />
+        <activity
+            android:name=".Notification"
+            android:exported="false" />
+        <activity
+            android:name=".Home_Activity"
+            android:exported="false" />
         <activity
             android:name=".Pharmacie_Profile"
             android:exported="false" />
@@ -21,7 +32,6 @@
         <activity
             android:name=".Traitement_commende"
             android:exported="false" />
-        
         <activity
             android:name=".profile_client"
             android:exported="false" />
@@ -66,6 +76,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

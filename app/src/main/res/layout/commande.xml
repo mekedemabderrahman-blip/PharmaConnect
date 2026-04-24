@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F7FB">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- HEADER -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🛒 Commande Produit"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#E91E63"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- CARD PRODUIT -->
+        <androidx.cardview.widget.CardView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:padding="10dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <!-- IMAGE -->
+                <ImageView
+                    android:id="@+id/imgCommande"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@drawable/medication_24dp_000000_fill0_wght400_grad0_opsz24"
+                    android:scaleType="centerCrop"/>
+
+                <!-- NAME -->
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Doliprane 1000mg"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#000"/>
+
+                <!-- PRICE -->
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="350 DA"
+                    android:textSize="16sp"
+                    android:textColor="#4CAF50"
+                    android:layout_marginTop="5dp"/>
+
+                <!-- PHARMACY -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🏥 Pharmacie El Houda"
+                    android:textSize="14sp"
+                    android:textColor="#777"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- QUANTITY -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantité"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="5dp"/>
+
+        <EditText
+            android:id="@+id/etQuantit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Entrer quantité"
+            android:inputType="number"
+            android:background="#FFFFFF"
+            android:padding="10dp"/>
+
+        <!-- BUTTON -->
+        <Button
+            android:id="@+id/btnCommande"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Commander maintenant"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2ECC71"
+            android:layout_marginTop="25dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
